@@ -11,7 +11,7 @@ fn main() {
         io::stdin().read_line(&mut guess).expect(err_msg_input);
 
         let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
+            Ok(parsed_value) => parsed_value,
             Err(_) => {
                 print!("{}", err_msg_num);
                 continue;
