@@ -1,3 +1,4 @@
+use std::io;
 fn main() {
     let animals: (&str, &str, &str) = ("cow", "dog", "cat");
 
