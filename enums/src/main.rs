@@ -120,7 +120,7 @@ fn main() {
         _ => count += 1,
     }
 
-    let coin3: Coin = Coin::Quarter(UsSate::Alabama)
+    let coin3: Coin = Coin::Quarter(UsSate::Alabama);
     if let Coin::Quarter(state_3) = coin3 {
         println!("State quarter from {:?}", state_3)
     }
