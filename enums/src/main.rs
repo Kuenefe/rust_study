@@ -102,6 +102,30 @@ fn main() {
         _ => (),
     }
 
+    let config_max: Option<u8> = Some(3 as u8);
+    match config_max {
+        Some(max) => println!("The maximum is configured to be {}", max),
+        _ => (),
+    }
+
+    let conf2: Option<u8> = Some(5 as u8);
+    if let Some(max) = conf2 {
+        println!("The maximum is configured to be {}", max)
+    }
+
+    let mut count = 0;
+    let coin2: Coin = Coin::Quarter(UsSate::Alabama);
+    match coin2 {
+        Coin::Quarter(state2) => println!("State quarter from {:?}", state2),
+        _ => count += 1,
+    }
+
+    let coin3: Coin = Coin::Quarter(UsSate::Alabama)
+    if let Coin::Quarter(state_3) = coin3 {
+        println!("State quarter from {:?}", state_3)
+    }
+
+
 }
 
 fn route(ip_kind: IPAddrKind) {}
