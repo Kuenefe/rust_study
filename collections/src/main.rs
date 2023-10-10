@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 fn main() {
     let mut v: Vec<i32> = Vec::new();
 
@@ -38,6 +39,21 @@ fn main() {
         SpreadsheetCell::Float(4.12),
         SpreadsheetCell::Text(String::from("Hello"))
     };
+
+    let text: &str = "hello world wonderful world";
+
+    let mut my_map = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count: &mut i32 = my_map.entry(word).or_insert(0);
+        *count += 1;
+    }
+
+    println!("{:?}", my_map);
+
+    
+
+
 
 }
 
